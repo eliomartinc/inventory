@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Haven Detailed Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1><i class="fas fa-warehouse"></i> Tech Haven Inventory Detail</h1>
+    </header>
+
+    <main>
+        <div class="controls">
+            <h2>Current Stock Levels</h2>
+            </div>
+        
+        <div class="inventory-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" class="group-header asset-header">ASSET IDENTIFICATION</th>
+                        <th colspan="3" class="group-header qty-header">QUANTITY / VALUE</th>
+                        <th colspan="3" class="group-header purchase-header">PURCHASE & VENDOR</th>
+                    </tr>
+                    <tr>
+                        <th>Item No.</th>
+                        <th>Name</th>
+                        <th>Description (Category)</th>
+                        <th>Stock Qty</th>
+                        <th>Reorder?</th>
+                        <th>Reorder Qty</th>
+                        <th>Last Order Date</th>
+                        <th>Vendor</th>
+                        <th>Price / Item</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Item No.">GPU001</td>
+                        <td data-label="Name">RTX 4070 Graphics Card</td>
+                        <td data-label="Description (Category)">High-performance gaming GPU</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">15</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-15</td>
+                        <td data-label="Vendor">NVIDIA Partner</td>
+                        <td data-label="Price / Item">$599.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">CPU005</td>
+                        <td data-label="Name">Intel Core i7-14700K</td>
+                        <td data-label="Description (Category)">14th Gen Desktop Processor</td>
+                        <td data-label="Stock Qty" class="qty-status-zero">0</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">50</td>
+                        <td data-label="Last Order Date">2025-09-01</td>
+                        <td data-label="Vendor">Intel Direct</td>
+                        <td data-label="Price / Item">$399.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">SSD003</td>
+                        <td data-label="Name">2TB NVMe M.2 SSD</td>
+                        <td data-label="Description (Category)">High-speed internal storage</td>
+                        <td data-label="Stock Qty" class="qty-status-low">5</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">25</td>
+                        <td data-label="Last Order Date">2025-11-01</td>
+                        <td data-label="Vendor">Samsung Global</td>
+                        <td data-label="Price / Item">$95.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">MON015</td>
+                        <td data-label="Name">27" 4K Gaming Monitor</td>
+                        <td data-label="Description (Category)">High refresh rate display</td>
+                        <td data-label="Stock Qty" class="qty-status-low">1</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">10</td>
+                        <td data-label="Last Order Date">2025-08-20</td>
+                        <td data-label="Vendor">ViewSonic Inc.</td>
+                        <td data-label="Price / Item">$450.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">LAP022</td>
+                        <td data-label="Name">XPS 15 Premium Laptop</td>
+                        <td data-label="Description (Category)">15-inch professional notebook</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">8</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-25</td>
+                        <td data-label="Vendor">Dell Distributor</td>
+                        <td data-label="Price / Item">$1299.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">KEY007</td>
+                        <td data-label="Name">Tactile Mechanical Keyboard</td>
+                        <td data-label="Description (Category)">RGB peripheral, brown switches</td>
+                        <td data-label="Stock Qty" class="qty-status-low">7</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">30</td>
+                        <td data-label="Last Order Date">2025-11-10</td>
+                        <td data-label="Vendor">Logitech OEM</td>
+                        <td data-label="Price / Item">$89.50</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">PSU011</td>
+                        <td data-label="Name">850W Modular Power Supply</td>
+                        <td data-label="Description (Category)">80+ Gold certified PSU</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">22</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-01</td>
+                        <td data-label="Vendor">Corsair Supply</td>
+                        <td data-label="Price / Item">$110.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">ROU004</td>
+                        <td data-label="Name">Wi-Fi 6 Mesh Router</td>
+                        <td data-label="Description (Category)">High-speed wireless networking</td>
+                        <td data-label="Stock Qty" class="qty-status-low">3</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">15</td>
+                        <td data-label="Last Order Date">2025-09-18</td>
+                        <td data-label="Vendor">TP-Link Vendor</td>
+                        <td data-label="Price / Item">$149.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">CAM002</td>
+                        <td data-label="Name">4K Pro Webcam</td>
+                        <td data-label="Description (Category)">Streaming and conference camera</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">35</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-11-05</td>
+                        <td data-label="Vendor">Logitech OEM</td>
+                        <td data-label="Price / Item">$75.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">COOL009</td>
+                        <td data-label="Name">AIO Liquid Cooler 360mm</td>
+                        <td data-label="Description (Category)">All-in-one CPU liquid cooling</td>
+                        <td data-label="Stock Qty" class="qty-status-low">4</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">12</td>
+                        <td data-label="Last Order Date">2025-10-30</td>
+                        <td data-label="Vendor">Cooler Master Dist.</td>
+                        <td data-label="Price / Item">$135.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p><i class="fas fa-cogs"></i> Inventory Control System. &copy; 2025 Tech Haven.</p>
+    </footer>
+
+</body>
+</html>
