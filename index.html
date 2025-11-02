@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Haven Detailed Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1><i class="fas fa-warehouse"></i> Tech Haven Inventory Detail</h1>
+    </header>
+
+    <main>
+        <div class="controls">
+            <h2>Current Stock Levels</h2>
+        </div>
+        
+        <div class="inventory-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="3" class="group-header asset-header">ASSET IDENTIFICATION</th>
+                        <th colspan="3" class="group-header qty-header">QUANTITY / VALUE</th>
+                        <th colspan="3" class="group-header purchase-header">PURCHASE & VENDOR</th>
+                    </tr>
+                    <tr>
+                        <th>Item No.</th>
+                        <th>Name</th>
+                        <th>Description (Category)</th>
+                        <th>Stock Qty</th>
+                        <th>Reorder?</th>
+                        <th>Reorder Qty</th>
+                        <th>Last Order Date</th>
+                        <th>Vendor</th>
+                        <th>Price / Item</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Item No.">GPU001</td>
+                        <td data-label="Name">RTX 4070 Graphics Card</td>
+                        <td data-label="Description (Category)">High-performance gaming GPU</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">15</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-15</td>
+                        <td data-label="Vendor">NVIDIA Partner</td>
+                        <td data-label="Price / Item">$599.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">CPU005</td>
+                        <td data-label="Name">Intel Core i7-14700K</td>
+                        <td data-label="Description (Category)">14th Gen Desktop Processor</td>
+                        <td data-label="Stock Qty" class="qty-status-zero">0</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">50</td>
+                        <td data-label="Last Order Date">2025-09-01</td>
+                        <td data-label="Vendor">Intel Direct</td>
+                        <td data-label="Price / Item">$399.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">SSD003</td>
+                        <td data-label="Name">2TB NVMe M.2 SSD</td>
+                        <td data-label="Description (Category)">High-speed internal storage</td>
+                        <td data-label="Stock Qty" class="qty-status-low">5</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">25</td>
+                        <td data-label="Last Order Date">2025-11-01</td>
+                        <td data-label="Vendor">Samsung Global</td>
+                        <td data-label="Price / Item">$95.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">MON015</td>
+                        <td data-label="Name">27" 4K Gaming Monitor</td>
+                        <td data-label="Description (Category)">High refresh rate display</td>
+                        <td data-label="Stock Qty" class="qty-status-low">1</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">10</td>
+                        <td data-label="Last Order Date">2025-08-20</td>
+                        <td data-label="Vendor">ViewSonic Inc.</td>
+                        <td data-label="Price / Item">$450.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">LAP022</td>
+                        <td data-label="Name">XPS 15 Premium Laptop</td>
+                        <td data-label="Description (Category)">15-inch professional notebook</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">8</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-25</td>
+                        <td data-label="Vendor">Dell Distributor</td>
+                        <td data-label="Price / Item">$1299.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">KEY007</td>
+                        <td data-label="Name">Tactile Mechanical Keyboard</td>
+                        <td data-label="Description (Category)">RGB peripheral, brown switches</td>
+                        <td data-label="Stock Qty" class="qty-status-low">7</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">30</td>
+                        <td data-label="Last Order Date">2025-11-10</td>
+                        <td data-label="Vendor">Logitech OEM</td>
+                        <td data-label="Price / Item">$89.50</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">PSU011</td>
+                        <td data-label="Name">850W Modular Power Supply</td>
+                        <td data-label="Description (Category)">80+ Gold certified PSU</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">22</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-01</td>
+                        <td data-label="Vendor">Corsair Supply</td>
+                        <td data-label="Price / Item">$110.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">ROU004</td>
+                        <td data-label="Name">Wi-Fi 6 Mesh Router</td>
+                        <td data-label="Description (Category)">High-speed wireless networking</td>
+                        <td data-label="Stock Qty" class="qty-status-low">3</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">15</td>
+                        <td data-label="Last Order Date">2025-09-18</td>
+                        <td data-label="Vendor">TP-Link Vendor</td>
+                        <td data-label="Price / Item">$149.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">CAM002</td>
+                        <td data-label="Name">4K Pro Webcam</td>
+                        <td data-label="Description (Category)">Streaming and conference camera</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">35</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-11-05</td>
+                        <td data-label="Vendor">Logitech OEM</td>
+                        <td data-label="Price / Item">$75.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">COOL009</td>
+                        <td data-label="Name">AIO Liquid Cooler 360mm</td>
+                        <td data-label="Description (Category)">All-in-one CPU liquid cooling</td>
+                        <td data-label="Stock Qty" class="qty-status-low">4</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">12</td>
+                        <td data-label="Last Order Date">2025-10-30</td>
+                        <td data-label="Vendor">Cooler Master Dist.</td>
+                        <td data-label="Price / Item">$135.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">HS012</td>
+                        <td data-label="Name">Wireless Gaming Headset</td>
+                        <td data-label="Description (Category)">Noise-cancelling audio peripheral</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">18</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-08-10</td>
+                        <td data-label="Vendor">HyperX Supplier</td>
+                        <td data-label="Price / Item">$99.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">RAM007</td>
+                        <td data-label="Name">32GB DDR5 RAM Kit (6000MHz)</td>
+                        <td data-label="Description (Category)">High-speed system memory</td>
+                        <td data-label="Stock Qty" class="qty-status-low">6</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">40</td>
+                        <td data-label="Last Order Date">2025-11-20</td>
+                        <td data-label="Vendor">Crucial Memory</td>
+                        <td data-label="Price / Item">$119.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">MOU001</td>
+                        <td data-label="Name">Lightweight Wireless Mouse</td>
+                        <td data-label="Description (Category)">Ergonomic gaming mouse</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">25</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-11-15</td>
+                        <td data-label="Vendor">Razer Official</td>
+                        <td data-label="Price / Item">$59.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">MB003</td>
+                        <td data-label="Name">Z790 Premium Motherboard</td>
+                        <td data-label="Description (Category)">High-end LGA 1700 mainboard</td>
+                        <td data-label="Stock Qty" class="qty-status-low">2</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">10</td>
+                        <td data-label="Last Order Date">2025-10-05</td>
+                        <td data-label="Vendor">ASUS Components</td>
+                        <td data-label="Price / Item">$275.50</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">EXT006</td>
+                        <td data-label="Name">5TB External HDD</td>
+                        <td data-label="Description (Category)">USB 3.0 external storage</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">12</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-09-25</td>
+                        <td data-label="Vendor">Seagate Supply</td>
+                        <td data-label="Price / Item">$115.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">SPK005</td>
+                        <td data-label="Name">2.1 Desktop Speaker System</td>
+                        <td data-label="Description (Category)">High quality audio speakers</td>
+                        <td data-label="Stock Qty" class="qty-status-zero">0</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">20</td>
+                        <td data-label="Last Order Date">2025-07-10</td>
+                        <td data-label="Vendor">Logitech OEM</td>
+                        <td data-label="Price / Item">$65.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">CAB010</td>
+                        <td data-label="Name">Cat 8 Ethernet Cable (10m)</td>
+                        <td data-label="Description (Category)">Ultra-high-speed network cable</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">50</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-11-28</td>
+                        <td data-label="Vendor">Cable Direct Co.</td>
+                        <td data-label="Price / Item">$8.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">SMT001</td>
+                        <td data-label="Name">Fitness Smartwatch 2.0</td>
+                        <td data-label="Description (Category)">Wearable fitness tracker</td>
+                        <td data-label="Stock Qty" class="qty-status-low">9</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">20</td>
+                        <td data-label="Last Order Date">2025-09-05</td>
+                        <td data-label="Vendor">Xiaomi Distributor</td>
+                        <td data-label="Price / Item">$79.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">TAB003</td>
+                        <td data-label="Name">11-inch Pro Tablet</td>
+                        <td data-label="Description (Category)">High-resolution productivity tablet</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">11</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-18</td>
+                        <td data-label="Vendor">Samsung Global</td>
+                        <td data-label="Price / Item">$499.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">VR002</td>
+                        <td data-label="Name">VR Headset Pro 3</td>
+                        <td data-label="Description (Category)">Standalone Virtual Reality System</td>
+                        <td data-label="Stock Qty" class="qty-status-low">3</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">8</td>
+                        <td data-label="Last Order Date">2025-11-08</td>
+                        <td data-label="Vendor">Meta Partner</td>
+                        <td data-label="Price / Item">$349.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">SW001</td>
+                        <td data-label="Name">24-Port Gigabit Switch</td>
+                        <td data-label="Description (Category)">Managed network switch</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">7</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-09</td>
+                        <td data-label="Vendor">Netgear Supply</td>
+                        <td data-label="Price / Item">$125.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">HUB004</td>
+                        <td data-label="Name">7-in-1 USB-C Hub</td>
+                        <td data-label="Description (Category)">Multi-port adapter and charger</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">45</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-11-22</td>
+                        <td data-label="Vendor">Anker Distributor</td>
+                        <td data-label="Price / Item">$35.00</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">TABL001</td>
+                        <td data-label="Name">16" Drawing Pen Tablet</td>
+                        <td data-label="Description (Category)">Professional graphic tablet</td>
+                        <td data-label="Stock Qty" class="qty-status-low">4</td>
+                        <td data-label="Reorder?"><span class="reorder-status-urgent">YES</span></td>
+                        <td data-label="Reorder Qty">10</td>
+                        <td data-label="Last Order Date">2025-11-12</td>
+                        <td data-label="Vendor">Wacom Corp.</td>
+                        <td data-label="Price / Item">$299.99</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Item No.">STRIP005</td>
+                        <td data-label="Name">10-Outlet Surge Protector</td>
+                        <td data-label="Description (Category)">Power distribution and protection</td>
+                        <td data-label="Stock Qty" class="qty-status-safe">30</td>
+                        <td data-label="Reorder?"><span class="reorder-status">NO</span></td>
+                        <td data-label="Reorder Qty">0</td>
+                        <td data-label="Last Order Date">2025-10-28</td>
+                        <td data-label="Vendor">APC Energy</td>
+                        <td data-label="Price / Item">$25.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p><i class="fas fa-cogs"></i> Inventory Control System. &copy; 2025 Tech Haven.</p>
+    </footer>
+
+</body>
+</html>
